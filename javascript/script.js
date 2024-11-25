@@ -6,28 +6,28 @@ const productos = [
         nombre: "SCUM",
         precio: 60,
         stock: 5,
-        imagen: "./img/scum.jpg"
+        imagen: "img/scum.jpg"
     },
     {
         id: 2,
         nombre: "DayZ",
         precio: 60,
         stock: 5,
-        imagen: "./img/dayz.jpg"
+        imagen: "img/dayz.jpg"
     },
     {
         id: 3,
         nombre: "VEIN",
         precio: 60,
         stock: 5,
-        imagen: "./img/vein.jpg"
+        imagen: "img/vein.jpg"
     },
     {
         id: 4,
         nombre: "Hell Let Loose",
         precio: 60,
         stock: 5,
-        imagen: "./img/hll.jpg"
+        imagen: "img/hll.jpg"
     },
 
 ];
