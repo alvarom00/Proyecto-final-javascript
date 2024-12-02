@@ -3,6 +3,7 @@ const carrito = [];
 const productos = [
     {
         id: 1,
+        categoria: "survival",
         nombre: "SCUM",
         precio: 60,
         stock: 5,
@@ -10,6 +11,7 @@ const productos = [
     },
     {
         id: 2,
+        categoria: "survival",
         nombre: "DayZ",
         precio: 60,
         stock: 5,
@@ -17,6 +19,7 @@ const productos = [
     },
     {
         id: 3,
+        categoria: "survival",
         nombre: "VEIN",
         precio: 60,
         stock: 5,
@@ -24,6 +27,7 @@ const productos = [
     },
     {
         id: 4,
+        categoria: "combate",
         nombre: "Hell Let Loose",
         precio: 60,
         stock: 5,
@@ -56,17 +60,31 @@ function actualizarStock(id, cantidad) {
         console.warn('El stock no puede ser negativo.');
       }
 }
-function mostrarProductos() {
-    const productosDiv = document.getElementById("productos");
-    productos.forEach(producto => {
+function mostrarProductos(categoria) {
+    const survivalHorrors = productos.filter(producto => producto.categoria === "survival")
+    const combate = productos.filter(producto => producto.categoria === "combate")
+    const productosSurvivalDiv = document.getElementById("productosSurvival");
+    const productosCombateDiv = document.getElementById("productosCombate");
+    productosSurvivalDiv.innerHTML = '';
+    productosCombateDiv.innerHTML = '';
+    survivalHorrors.forEach(producto => {
         const productoDiv = document.createElement("div");
         productoDiv.innerHTML = `
             <h3>${producto.nombre}</h3>
             <img src="${producto.imagen}" alt="${producto.nombre}" height="100px" width="200px">
             <p>Precio: $${producto.precio}</p>
             <button onclick="agregarAlCarrito(${producto.id})">Agregar al carrito</button>`;
-        productosDiv.appendChild(productoDiv);
+        productosSurvivalDiv.appendChild(productoDiv);
     });
+    combate.forEach(producto => {
+        const productoDiv = document.createElement("div");
+        productoDiv.innerHTML = `
+            <h3>${producto.nombre}</h3>
+            <img src="${producto.imagen}" alt="${producto.nombre}" height="100px" width="200px">
+            <p>Precio: $${producto.precio}</p>
+            <button onclick="agregarAlCarrito(${producto.id})">Agregar al carrito</button>`;
+        productosCombateDiv.appendChild(productoDiv);
+    })
 }
 
 function agregarAlCarrito(id) {
