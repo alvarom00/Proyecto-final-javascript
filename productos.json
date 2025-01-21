@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "categoria": "survival",
+    "nombre": "SCUM",
+    "precio": 60,
+    "stock": 5,
+    "stockInicial": 5,
+    "imagen": "img/scum.jpg"
+  },
+  {
+    "id": 2,
+    "categoria": "survival",
+    "nombre": "DayZ",
+    "precio": 60,
+    "stock": 5,
+    "stockInicial": 5,
+    "imagen": "img/dayz.jpg"
+  },
+  {
+    "id": 3,
+    "categoria": "survival",
+    "nombre": "VEIN",
+    "precio": 60,
+    "stock": 5,
+    "stockInicial": 5,
+    "imagen": "img/vein.jpg"
+  },
+  {
+    "id": 4,
+    "categoria": "combate",
+    "nombre": "Hell Let Loose",
+    "precio": 60,
+    "stock": 5,
+    "stockInicial": 5,
+    "imagen": "img/hll.jpg"
+  }
+]
